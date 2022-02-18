@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<header th:insert="blocks/header :: header"></header>
+<div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+    <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+        <span class="fs-4">
+            <p th:text="${title}" />
+        </span>
+    </a>
+
+    <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+        <a class="me-3 py-2 text-dark text-decoration-none" href="/">Home page</a>
+        <a class="me-3 py-2 text-dark text-decoration-none" href="/registration">Registration</a>
+        <a class="me-3 py-2 text-dark text-decoration-none" href="/userManager">User manager</a>
+    </nav>
+</div>
+
+<main style="margin: auto; width: 50%;">
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Congratulations!</h4>
+        <p>You have successfully logged into your account.</p>
+    </div>
+</main>
+
+</body>
+</html>

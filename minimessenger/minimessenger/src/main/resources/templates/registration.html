@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<header th:insert="blocks/header :: header"></header>
+<div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+    <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+        <span class="fs-4">
+            <p th:text="${title}" />
+        </span>
+
+    </a>
+
+    <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+        <a class="me-3 py-2 text-dark text-decoration-none" href="/">Home page</a>
+        <a class="me-3 py-2 text-dark text-decoration-none" href="/registration">Registration</a>
+        <a class="me-3 py-2 text-dark text-decoration-none" href="/userManager">User manager</a>
+    </nav>
+</div>
+
+<main class="form-signin">
+    <form class="col-md-4 offset-md-4" action="#" method="post" th:action="@{/registration}" th:object="${curCustomUser}">
+        <h1 class="h3 mb-3 fw-normal">Please register</h1>
+
+        <div class="form-floating">
+            <input type="email" class="form-control" id="femail" th:field="*{email}" placeholder="name@example.com">
+            <label for="femail">Email address</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="fpassword" th:field="*{password}" placeholder="Password">
+            <label for="fpassword">Password</label>
+        </div>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="fname" th:field="*{name}" placeholder="Name">
+            <label for="fname">Name</label>
+        </div>
+
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+        <p>© 2022 Gulkovich Vadim.</p>
+    </form>
+</main>
+
+
+</body>
+</html>
